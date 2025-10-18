@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <!--Menu principal-->
+        <div class="menuprincipal">
+            <hr>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="cadastrarproduto.html">Cadastrar Produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="editarproduto.php">Editar Produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="movimentacaoproduto.php">Movimentação de Produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exibirestoque.php">Exibir estoque</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-danger" href="sairdosistema.php">Sair do sistema</a>
+                </li>
+            </ul>
+            </ul>
+            <hr>
+        </div>
+        <!--FIm do Menu principal-->
+
+        <form action="cadastrarproduto.php" id="cadastrarproduto" name="cadastrarproduto" method="post">
+            <!--Primeira linha do from-->
+            <div class="row p-2 text-center">
+                <h2>Cadastrar Produto</h2>
+            </div>
+            <!--Segunda linha do from-->
+            <div class="row p-2">
+                <div class="col-3">
+                Código do produto:<input type="text" name="prodcod" id="prodcod" placeholder="Digite código do produto" class="form-control" required>
+                </div>
+                <div class="col">
+                Nome do produto:<input type="text" name="prodnome" id="prodnome" placeholder="Digite o nome do produto" class="form-control" required>
+                </div>
+            </div>
+            <!--Terceira linha do from-->
+            <div class="row p-2">
+                <div class="col">
+                    Quant. de produto:<input type="number" name="prodqt" id="prodqt" placeholder="Digite a quantidade" class="form-control" required>
+                </div>
+                <div class="col">
+                    Peso, Volume, Comprimento:<input type="text" name="prodmed" id="prodmed" placeholder="Ex: 500" class="form-control" required>
+                </div>
+                <div class="col">
+                    Unidade de medida
+                    <select id="produnmed" name="produnmed" class="form-select" required>
+                        <option>Escolher:</option>
+                        <option value="g">(g)Gramas</option>
+                        <option value="Kg">(Kg)Kilogramas</option>
+                        <option value="T">(T)Toneladas</option>
+                        <option value="L">(L)Litros</option>
+                        <option value="ml">(ml)Mililitros</option>
+                        <option value="M">(M)Metros</option>
+                        <option value="cm">(cm)Centimetros</option>
+                    </select>
+                </div>
+                <div class="col">
+                    Dimensões do produto(cm):
+                    <input type="text" name="proddim" id="proddim" placeholder="comp. x largura x altura" class="form-control" required>
+                </div>
+            </div>    
+                <!--Quarta linha do from-->
+            <div class="row p-2">
+                <div class="col-2">
+                    Data de validade:<input type="date" name="prodvalid" id="prodvalid" class="form-control" required>
+                </div>
+                <div class="col-2">
+                    Data de aquisição:<input type="date" name="prodaquisicao" id="prodaquisicao" class="form-control" required>
+                </div>
+                <div class="col-2">
+                    Cor:
+                    <select id="prodcor" name="prodcor" class="form-select" required>
+                        <option>Escolher:</option>
+                        <option>Branco</option>
+                        <option>Preto</option>
+                        <option>Cinza</option>
+                        <option>Bege</option>
+                        <option>Vermelho</option>
+                        <option>Amarelo</option>
+                        <option>Azul</option>
+                        <option>Verde</option>
+                        <option>Laranja</option>
+                        <option>Roxo</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    Aplicação do produto:
+                    <select id="prodapli" name="prodapli" class="form-select" required>
+                        <option>Escolher:</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>  
+                </div>
+
+                 <div class="col">
+                    Apresentação do produto:
+                    <select id="prodapre" name="prodapre" class="form-select" required>
+                        <option value="">Escolher:</option>
+                        <option value="Caixa">Caixa</option>
+                        <option value="Pacote">Pacote</option>
+                        <option value="Lata">Lata</option>
+                        <option value="Unidade">Unidade</option>
+                        <option value="Bisnaga">Bisnaga</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                
+            </div>
+            <!--Quinta linha do form-->
+            <div class="row p-2">
+                <div class="col">
+                    Outras Informações:
+                    <textarea class="form-control" id="prodout" name="prodout" placeholder="Digite aqui mais descrições sobre o produto"></textarea>
+                </div>
+
+            </div>
+            <!--Linha do form-->
+            <div class="row p-2">
+                <input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar Produto" class="btn btn-success">
+                <a href="editarproduto.php" class="btn btn-warning mt-2" role="button">Editar Produto</a>
+                <input type="reset" name="cancelar" id="cancelar" value="Cancelar" class="btn btn-danger mt-2">    
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
