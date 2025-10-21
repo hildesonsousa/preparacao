@@ -1,10 +1,7 @@
 <?php
 
 // 1. Configuração do Banco de Dados (Reaproveitado do cadastrarproduto.php)
-$servername = "localhost";
-$username = "root"; // Mude para o seu usuário do MySQL
-$password = "";   // Mude para sua senha do MySQL
-$dbname = "saep_preparacao"; // Nome do banco de dados
+include_once 'conexao.php';
 $table_name2 = "produtos"; // Nome da tabela que armazenará os produtos
 
 // Variáveis para armazenar os dados do produto para exibição

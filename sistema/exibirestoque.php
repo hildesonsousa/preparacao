@@ -1,9 +1,6 @@
 <?php
 // 1. Configuração do Banco de Dados
-$servername = "localhost"; // Localhost
-$username = "root";       // Usuário MySQL
-$password = "";           // Senha MySQL
-$dbname = "saep_preparacao"; // Nome do banco de dados
+include_once 'conexao.php';
 $table_name2  = "produtos"; // Tabela de produtos
 $table_name3= "movimentacoes"; // Tabela assumida para histórico de movimentação
 

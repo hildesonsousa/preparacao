@@ -50,7 +50,7 @@ VALUES
 
 
 /*Populando a tabela produtos*/
-INSERT INTO `saep_preparacao`.`produto` (
+INSERT INTO `saep_preparacao`.`produtos` (
     codigo_produto,
     nome_produto,
     quantidade,
@@ -167,3 +167,10 @@ CONSTRAINT `fk_movimentacoes_produtos`
 
     /*Exibir todas as movimentações*/
     SELECT * FROM `saep_preparacao`.`movimentacoes`;
+
+
+    /*Comando para adicionar campo em tabela*/
+    /*
+    ALTER TABLE `saep_preparacao`.`produtos`
+    ADD COLUMN preco DECIMAL(10, 2);
+    */

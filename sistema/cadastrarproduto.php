@@ -1,10 +1,7 @@
 <?php
 
 // 1. Configuração do Banco de Dados
-$servername = "localhost";
-$username = "root"; // Mude para o seu usuário do MySQL
-$password = "";   // Mude para sua senha do MySQL
-$dbname = "saep_preparacao"; // Mude para o nome do seu banco de dados
+include_once 'conexao.php';
 $table_name2 = "produtos"; // Nome da tabela que armazenará os produtos
 
 // 2. Conexão com o Banco de Dados
@@ -70,7 +67,7 @@ if (isset($_POST['cadastrar'])) {
         //após inserir o produto exibir a mensagem e redirecionar para o menu
         //Podemos trocar por uma página a linha abaixo
         echo "<!DOCTYPE html><html lang='pt-br'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Sucesso</title><link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'></head><body><div class='container mt-5'><div class='alert alert-success' role='alert'>Produto cadastrado com sucesso!</div><a href='cadastrarproduto.html' class='btn btn-primary'>Voltar ao Cadastro</a></div></body></html>";
-        header("refresh:2;url=home.html");
+        header("refresh:2;url=home.php");
     } catch (PDOException $e) {
         // Em caso de erro na execução da query
         //Podemos trocar por uma página a linha abaixo

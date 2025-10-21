@@ -3,10 +3,7 @@
 session_start();
 
 // 1. Configuração do Banco de Dados (Baseado nos outros arquivos)
-$servername = "localhost";
-$username = "root"; // Mude para o seu usuário do MySQL
-$password = "";   // Mude para sua senha do MySQL
-$dbname = "saep_preparacao"; // Nome do banco de dados
+include_once 'conexao.php';
 $table_login = "login"; // Nome da tabela de login
 
 // 2. Coleta dos Dados do Formulário via POST (de index.html)
